@@ -1,0 +1,5 @@
+{
+    "port":5000,
+    "jwtSecret": "olevegic mern sctK",
+    "mongoURI":"mongodb+srv://Olevegic:23012005@cluster0.mbwut.azure.mongodb.net/<dbname>?retryWrites=true&w=majority"
+}
