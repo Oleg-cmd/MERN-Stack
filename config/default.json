@@ -1,5 +1,6 @@
 {
     "port":5000,
     "jwtSecret": "olevegic mern sctK",
+    "baseUrl":"http://localhost:5000",
     "mongoURI":"mongodb+srv://Olevegic:23012005@cluster0.mbwut.azure.mongodb.net/<dbname>?retryWrites=true&w=majority"
 }
