@@ -1,11 +1,10 @@
 const {Router} = require('express')
-const router = Router()
 const bcrypt = require('bcryptjs')
 const config = require('config')
-const {check, validationResult} = require('express-validator')
 const jwt = require('jsonwebtoken')
+const {check, validationResult} = require('express-validator')
 const User = require('../models/User')
-
+const router = Router()
 
 // /api/auth/register
 router.post(
@@ -34,7 +33,7 @@ router.post(
         const candidate = await User.findOne({ email })
 
         if(candidate){
-            res.status(400).json({message:"Такой пользователь уже существует"})
+            return res.status(400).json({message:"Такой пользователь уже существует"})
         }
          
         const hashedPassword = await bcrypt.hash(password, 12)

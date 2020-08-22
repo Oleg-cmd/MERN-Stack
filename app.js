@@ -13,6 +13,8 @@ app.use('/api/auth', require('./rotes/auth.routes'))
 
 app.use('/api/link', require('./rotes/link.routes'))
 
+app.use('/t', require('./rotes/redirect.routes'))
+
 async function start() {
     try {
         await mongoose.connect(config.get('mongoURI'), {
